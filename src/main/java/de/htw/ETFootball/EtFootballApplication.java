@@ -1,0 +1,13 @@
+package de.htw.ETFootball;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class EtFootballApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(EtFootballApplication.class, args);
+	}
+
+}
