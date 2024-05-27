@@ -4,6 +4,6 @@ COPY . ./
 RUN gradle build
 
 FROM openjdk:21-slim
-LABEL authors="emre.tekguel"
-COPY --from=builder /home/gradle/src/build/libs/ETFootball /app.jar
-ENTRYPOINT ["java","-jar","/app.jar"]
+LABEL authors="emre tekguel"
+COPY --from=builder build/libs .
+ENTRYPOINT ["java","-jar","/ETFootball-0.0.1-SNAPSHOT.jar"]
