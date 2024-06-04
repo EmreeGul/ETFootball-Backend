@@ -1,0 +1,5 @@
+# application.yml
+football:
+  api:
+    base-url: https://api.football-data.org/v4
+    token: d450c0e5766d4b5f8433cc408a3c4a09
