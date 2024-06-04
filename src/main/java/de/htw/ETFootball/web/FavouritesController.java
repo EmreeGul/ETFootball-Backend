@@ -5,6 +5,8 @@ import org.springframework.web.bind.annotation.*;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/favourites")
 @CrossOrigin(origins = {"http://localhost:3000", "https://etfootball-frontend.onrender.com", "https://etfootball-backend.onrender.com"})
