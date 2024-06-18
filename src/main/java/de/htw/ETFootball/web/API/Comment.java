@@ -32,9 +32,6 @@ public class Comment {
 
     }
 
-
-
-
     public String getTitle() {
         return title;
     }
