@@ -9,14 +9,14 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.*;
 
 @RestController
-@CrossOrigin(origins = {"https://etfootball-frontend.onrender.com/", "http://localhost:5173/", "http://localhost:8080"})
+@CrossOrigin(origins = {"https://etfootball-frontend.onrender.com", "http://localhost:5173", "http://localhost:8080"})
 public class Controller {
 
-    @GetMapping("/post")
+    @GetMapping("/comments")
     public List<Comment> index() {
         //test
-        Comment entry = new Comment(3, "Test", "Test", "Test25", null);
-        Comment sentry = new Comment(2, "Tests", "Tesat", "Testd25", null); //a
+        Comment entry = new Comment(5, "sdsd", "sd", "df", null);
+        Comment sentry = new Comment(12, "dsf", "fds", "Testd32", null); //a
 
 
         return List.of(entry, sentry);
