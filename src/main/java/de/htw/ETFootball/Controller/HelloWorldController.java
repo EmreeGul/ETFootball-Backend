@@ -1,4 +1,4 @@
-package de.htw.ETFootball.Controller;
+/*package de.htw.ETFootball.Controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -9,8 +9,7 @@ public class HelloWorldController {
 
     @GetMapping(path = "/")
     public ModelAndView showHelloWorldPage(){
-        return new ModelAndView("hello world ");
+        return new ModelAndView("hello world");
     }
-
 }
-
+*/

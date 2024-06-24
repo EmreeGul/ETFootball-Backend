@@ -12,7 +12,7 @@ import java.util.*;
 @CrossOrigin(origins = {"https://etfootball-frontend.onrender.com", "http://localhost:5173", "http://localhost:8080"})
 public class Controller {
 
-  /*  @GetMapping("/comments")
+    @GetMapping("/")
     public List<Comment> index() {
         //test
         Comment entry = new Comment(5, "sdsd", "sd", "df", null);
@@ -21,5 +21,5 @@ public class Controller {
 
         return List.of(entry, sentry);
     } //a
-*/
+
 }
