@@ -1,4 +1,4 @@
-package de.htw.ETFootball.web;
+package de.htw.ETFootball.Controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;

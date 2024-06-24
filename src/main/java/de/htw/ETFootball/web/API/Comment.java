@@ -1,15 +1,14 @@
 package de.htw.ETFootball.web.API;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 import java.time.LocalDateTime;
-
 @Entity
+@Table(name = "comments")
 public class Comment {
 
-
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
     private String title;
