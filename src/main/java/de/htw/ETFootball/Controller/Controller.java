@@ -1,4 +1,4 @@
-package de.htw.ETFootball.Controller;
+/*package de.htw.ETFootball.Controller;
 
 
 import de.htw.ETFootball.web.API.Comment;
@@ -21,5 +21,4 @@ public class Controller {
 
         return List.of(entry, sentry);
     } //a
-
-}
+}*/

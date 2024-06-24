@@ -2,12 +2,12 @@ package de.htw.ETFootball.Controller;
 
 import de.htw.ETFootball.repo.CommentRepository;
 import de.htw.ETFootball.web.API.Comment;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
+@CrossOrigin(origins = {"https://etfootball-frontend.onrender.com", "http://localhost:5173", "http://localhost:8080"})
 public class CommentController {
 
     private final CommentRepository commentRepository;
@@ -16,13 +16,18 @@ public class CommentController {
         this.commentRepository = commentRepository;
     }
 
-    @GetMapping("/comments")
+ /*   @GetMapping("/comments")
     public Iterable<Comment> findAllComments() {
         return this.commentRepository.findAll();
-    }
+    }*/
 
-    @PostMapping("/comments")
+    @PostMapping("/")
     public Comment addOneComments(@RequestBody Comment comment) {
         return this.commentRepository.save(comment);
     }
+
+    @GetMapping("/")
+        public Iterable<Comment> findAllComments() {
+            return this.commentRepository.findAll();
+    } //a
 }
