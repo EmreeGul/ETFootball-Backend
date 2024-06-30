@@ -26,6 +26,18 @@ public class CommentController {
         return this.commentRepository.findAll();
     }
 
+    @PutMapping("/{id}")
+    public ResponseEntity<Comment> updateComment(@PathVariable Integer id, @RequestBody Comment updatedComment) {
+        return commentRepository.findById(id)
+                .map(comment -> {
+                    comment.setTitle(updatedComment.getTitle());
+                    comment.setContent(updatedComment.getContent());
+                    Comment savedComment = commentRepository.save(comment);
+                    return ResponseEntity.ok(savedComment);
+                })
+                .orElseGet(() -> ResponseEntity.notFound().build());
+    }
+
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deletePost(@PathVariable Integer id) {
         if (commentRepository.existsById(id)) {
