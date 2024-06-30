@@ -26,8 +26,7 @@ public class FavoriteController {
         return favoriteRepository.save(favorite);
     }
 
-
-    @DeleteMapping("/favorites/{id}")
+    @DeleteMapping("/{id}")
     public ResponseEntity<Void> deleteFavorite(@PathVariable Long id) {
         if (favoriteRepository.existsById(id)) {
             favoriteRepository.deleteById(id);
@@ -36,5 +35,4 @@ public class FavoriteController {
             return ResponseEntity.notFound().build();
         }
     }
-
 }
