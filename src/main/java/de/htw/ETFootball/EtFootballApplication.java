@@ -11,5 +11,4 @@ public class EtFootballApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(EtFootballApplication.class, args);
 	}
-
 }

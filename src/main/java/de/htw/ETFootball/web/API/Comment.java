@@ -1,7 +1,8 @@
+
 package de.htw.ETFootball.web.API;
 
 import jakarta.persistence.*;
-import java.time.LocalDateTime;
+
 @Entity
 @Table(name = "comments")
 public class Comment {
@@ -14,15 +15,13 @@ public class Comment {
 
     private String content;
 
-
-    public Comment(long id, String title, String content, String author, LocalDateTime createdAt) {
-        this.id=id;
+    public Comment(long id, String title, String content) {
+        this.id = id;
         this.title = title;
         this.content = content;
     }
 
     public Comment() {
-
     }
 
     public Long getId() {

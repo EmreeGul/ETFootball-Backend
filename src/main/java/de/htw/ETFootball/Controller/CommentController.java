@@ -17,18 +17,13 @@ public class CommentController {
         this.commentRepository = commentRepository;
     }
 
- /*   @GetMapping("/comments")
-    public Iterable<Comment> findAllComments() {
-        return this.commentRepository.findAll();
-    }*/
-
-    @PostMapping("/")
+    @PostMapping("/comments")
     public Comment addOneComments(@RequestBody Comment comment) {
         return this.commentRepository.save(comment);
     }
 
-    @GetMapping("/")
+    @GetMapping("/comments")
     public Iterable<Comment> findAllComments() {
         return this.commentRepository.findAll();
-    } //a
+    }
 }
