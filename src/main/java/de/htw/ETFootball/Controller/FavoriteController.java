@@ -3,6 +3,7 @@ package de.htw.ETFootball.Controller;
 import de.htw.ETFootball.repo.FavoriteRepository;
 import de.htw.ETFootball.web.API.Favorite;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -25,8 +26,15 @@ public class FavoriteController {
         return favoriteRepository.save(favorite);
     }
 
-    @DeleteMapping("/{id}")
-    public void deleteFavorite(@PathVariable Long id) {
-        favoriteRepository.deleteById(id);
+
+    @DeleteMapping("/favorites/{id}")
+    public ResponseEntity<Void> deleteFavorite(@PathVariable Long id) {
+        if (favoriteRepository.existsById(id)) {
+            favoriteRepository.deleteById(id);
+            return ResponseEntity.ok().build();
+        } else {
+            return ResponseEntity.notFound().build();
+        }
     }
+
 }
